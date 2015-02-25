@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221202709) do
+ActiveRecord::Schema.define(version: 20150225232822) do
 
   create_table "pictures", force: true do |t|
     t.string   "url"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150221202709) do
     t.string   "password_digest"
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "admin"
   end
 
 end
