@@ -10,9 +10,10 @@ class TraditionsController < ApplicationController
 
 	def create
 		# get data from the form
-		tradition_params = params.require(:tradition).permit(:rating, :name, :description, :user_id, :approved)
+		tradition_params = params.require(:tradition).permit(:rating, :name, :description, :approved)
 		#give the data to the model
 		@tradition = Tradition.new(tradition_params)
+		@tradition.user = current_user
 		#save the model
 		if @tradition.save
 			# redirect to show or index
@@ -33,7 +34,7 @@ class TraditionsController < ApplicationController
 
 	def update
 		#get data from form
-		tradition_params = params.require(:tradition).permit(:rating, :name, :description, :user_id, :approved)
+		tradition_params = params.require(:tradition).permit(:rating, :name, :description, :approved)
 		#find the existing tradition
 		@tradition = Tradition.find(params[:id])
 		#update the tradition with new params

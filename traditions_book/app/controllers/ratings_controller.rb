@@ -10,9 +10,10 @@ def index
 
 	def create
 		# get data from the form
-		rating_params = params.require(:rating).permit(:rating_number, :tradition_id, :user_id)
+		rating_params = params.require(:rating).permit(:rating_number, :tradition_id)
 		#give the data to the model
 		@rating = Rating.new(rating_params)
+		@rating.user = current_user
 		#save the model
 		if @rating.save
 			# redirect to show or index
@@ -30,7 +31,7 @@ def index
 
 	def update
 		#get data from form
-		rating_params = params.require(:rating).permit(:rating_number, :tradition_id, :user_id)
+		rating_params = params.require(:rating).permit(:rating_number, :tradition_id)
 		#find the existing 
 		@rating = Rating.find(params[:id])
 		#update the picture with new params

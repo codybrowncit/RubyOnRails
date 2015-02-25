@@ -10,9 +10,10 @@ def index
 
 	def create
 		# get data from the form
-		picture_params = params.require(:picture).permit(:url, :user_id, :tradition_id, :approved)
+		picture_params = params.require(:picture).permit(:url, :tradition_id, :approved)
 		#give the data to the model
 		@picture = Picture.new(picture_params)
+		@picture.user = current_user
 		#save the model
 		if @picture.save
 			# redirect to show or index
@@ -33,7 +34,7 @@ def index
 
 	def update
 		#get data from form
-		picture_params = params.require(:picture).permit(:url, :user_id, :tradition_id, :approved)
+		picture_params = params.require(:picture).permit(:url, :tradition_id, :approved)
 		#find the existing 
 		@picture = Picture.find(params[:id])
 		#update the picture with new params

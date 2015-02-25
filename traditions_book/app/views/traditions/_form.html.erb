@@ -20,10 +20,6 @@
 	<%= form.text_field :description,class:"form-control" %>
 </p>
 <p>
-	<%= form.label :user %>
-	<%= form.collection_select :user_id, User.all, :id, :name, {}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
-</p>
-<p>
 	<%= form.label :approved %>
 	<%= form.check_box :approved %>
 

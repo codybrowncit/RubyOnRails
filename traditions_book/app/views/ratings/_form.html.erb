@@ -19,10 +19,6 @@
 	<%= form.collection_select :tradition_id, Tradition.all, :id, :name %>
 </p>
 <p>
-	<%= form.label :user %><br />
-	<%= form.collection_select :user_id, User.all, :id, :name %>
-</p>
-<p>
 	<%= form.submit class:"btn btn-default"%>
 </p>
 
