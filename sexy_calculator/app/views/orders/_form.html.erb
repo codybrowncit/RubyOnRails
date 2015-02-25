@@ -51,11 +51,7 @@
 	<%= form.label "Aisles Crossed" %><br />
 	<%= form.number_field :aisles %>
 </p>
-<% if session[:user_id] %>
-<p>
-	<%= form.hidden_field :user_id, value:session[:user_id]%>
-</p>
-<% end %>
+
 
 
 <p>
