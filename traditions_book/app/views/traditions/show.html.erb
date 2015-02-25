@@ -1,0 +1,25 @@
+<p>
+<strong>Name:</strong>
+<%= @tradition.name %>
+
+</p>
+<p>
+<strong>Description:</strong>
+<%= @tradition.description %>
+</p>
+
+<p>
+  <strong>Posted By:</strong>
+  <%= link_to @tradition.user.name, @tradition.user %>
+</p>
+
+<p>
+<strong>Rating:</strong>
+<%= image_tag @tradition.avg_rating, width:80%>
+</p>
+
+<% if !@tradition.approved %>
+<p>
+(Awaiting Aproval)
+</p>
+<% end %>

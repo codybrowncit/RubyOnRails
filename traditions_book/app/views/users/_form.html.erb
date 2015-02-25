@@ -1,0 +1,48 @@
+<% if @user.errors.any? %>
+<p>
+  User account could not be created<br />
+  Please correct the following <%= pluralize(@user.errors.count, 'error') %>:
+
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</p>  
+<% end %>
+
+<%= form_for(@user) do |form| %>
+
+<p>
+	<%= form.label :first_name %>
+	<%= form.text_field :first_name %>
+</p>
+<p>
+	<%= form.label :last_name %>
+	<%= form.text_field :last_name %>
+</p>
+<p>
+	<%= form.label :graduation_year %>
+	<%= form.select(:graduation_year, fromat_grad_years) %>
+</p>
+<p>
+	<%= form.label :major %>
+	<%= form.text_field :major %>
+</p>
+<p>
+	<%= form.label :email %>
+	<%= form.text_field :email %>
+</p>
+<p>
+	<%= form.label :password %>
+	<%= form.password_field :password %>
+</p>
+<p>
+	<%= form.label :password_confrimation %><br />
+	<%= form.password_field :password_confrimation %>
+</p>
+<p>
+	<%= form.submit class:"btn btn-default"%>
+</p>
+
+<% end %>

@@ -1,0 +1,30 @@
+<h2>Edit Planet</h2>
+
+<%= form_for(@planet) do |form| %>
+
+<p>
+	<%= form.label :name %><br />
+	<%= form.text_field :name %>
+</p>
+<p>
+	<%= form.label :position %><br />
+	<%= form.number_field :position %>
+</p>
+<p>
+	<%= form.label :orbital_speed %><br />
+	<%= form.number_field :orbital_speed %>
+</p>
+<p>
+	<%= form.label :volume %><br />
+	<%= form.text_field :volume %>
+</p>
+<p>
+	<%= form.label :mass %><br />
+	<%= form.text_field :mass %>
+
+</p>
+<p>
+	<%= form.submit %>
+</p>
+
+<% end %>

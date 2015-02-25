@@ -1,0 +1,11 @@
+	<tr>
+		<td><%= rating.rating_number %></td>
+		<td><%= rating.tradition.name %></td>
+		<td><%= rating.user.name %></td>
+
+			
+		<td>
+			<%= link_to "Edit", edit_rating_path(rating), class:"btn btn-default" %>
+		</td>
+
+	</tr>

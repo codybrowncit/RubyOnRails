@@ -1,0 +1,51 @@
+class PicturesController < ApplicationController
+before_action :authenticate_user!
+def index
+		@pictures = Picture.all
+	end
+
+	def new
+		@picture = Picture.new
+	end
+
+	def create
+		# get data from the form
+		picture_params = params.require(:picture).permit(:url, :user_id, :tradition_id, :approved)
+		#give the data to the model
+		@picture = Picture.new(picture_params)
+		#save the model
+		if @picture.save
+			# redirect to show or index
+			redirect_to @picture
+		else
+			render :new
+		end
+
+	end
+
+	def show
+		@picture = Picture.find(params[:id])
+	end
+
+	def edit
+		@picture = Picture.find(params[:id])
+	end
+
+	def update
+		#get data from form
+		picture_params = params.require(:picture).permit(:url, :user_id, :tradition_id, :approved)
+		#find the existing 
+		@picture = Picture.find(params[:id])
+		#update the picture with new params
+		@picture.update(picture_params)
+		#redirect to show
+		redirect_to @picture
+	end
+
+	def destroy
+		@picture = Picture.find(params[:id])
+		@picture.destroy
+		redirect_to pictures_path
+	end
+end
+

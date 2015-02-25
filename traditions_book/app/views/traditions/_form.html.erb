@@ -1,0 +1,35 @@
+<% if @tradition.errors.any? %>
+<p>
+  Tradition could not be saved.<br />
+  Please correct the following <%= pluralize(@tradition.errors.count, 'error') %>:
+  <ul>
+    <% @tradition.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</p>  
+<% end %>
+<%= form_for(@tradition) do |form| %>
+
+<p>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+</p>
+<p>
+	<%= form.label :description %>
+	<%= form.text_field :description %>
+</p>
+<p>
+	<%= form.label :user %>
+	<%= form.collection_select :user_id, User.all, :id, :name  %>
+</p>
+<p>
+	<%= form.label :approved %>
+	<%= form.check_box :approved %>
+
+</p>
+<p>
+	<%= form.submit class:"btn btn-default" %>
+</p>
+
+<% end %>
