@@ -15,34 +15,35 @@
 
 <p>
 	<%= form.label :first_name %>
-	<%= form.text_field :first_name %>
+	<%= form.text_field :first_name,class:"form-control" %>
 </p>
 <p>
 	<%= form.label :last_name %>
-	<%= form.text_field :last_name %>
+	<%= form.text_field :last_name,class:"form-control" %>
 </p>
 <p>
 	<%= form.label :graduation_year %>
-	<%= form.select(:graduation_year, fromat_grad_years) %>
+	<%= form.select(:graduation_year, fromat_grad_years, {},  { :class => 'form-control' }) %>
 </p>
 <p>
 	<%= form.label :major %>
-	<%= form.text_field :major %>
+	<%= form.text_field :major,class:"form-control" %>
 </p>
 <p>
 	<%= form.label :email %>
-	<%= form.text_field :email %>
+	<%= form.text_field :email,class:"form-control" %>
 </p>
 <p>
 	<%= form.label :password %>
-	<%= form.password_field :password %>
+	<%= form.password_field :password,class:"form-control" %>
 </p>
 <p>
 	<%= form.label :password_confrimation %><br />
-	<%= form.password_field :password_confrimation %>
+	<%= form.password_field :password_confrimation,class:"form-control" %>
 </p>
 <p>
 	<%= form.submit class:"btn btn-default"%>
 </p>
+
 
 <% end %>
