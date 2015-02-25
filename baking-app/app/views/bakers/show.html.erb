@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @baker.name %>
+</p>
+
+<p>
+  <strong>Cooking school:</strong>
+  <%= @baker.cooking_school %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @baker.zip_code %>
+</p>
+
+<p>
+  <strong>Recipes:</strong>
+  <ul>
+  <% @baker.recipes.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe %></li>
+  <% end %>
+  </ul>
+</p>
+
+
+<%= link_to 'Edit', edit_baker_path(@baker) %> |
+<%= link_to 'Back', bakers_path %>

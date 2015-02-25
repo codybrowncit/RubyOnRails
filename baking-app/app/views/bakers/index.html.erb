@@ -1,0 +1,27 @@
+<h1>Listing bakers</h1>
+<div class="CSSTableGenerator" >
+<table>
+
+    <tr>
+      <td>Name</td>
+      <td>Cooking School</td>
+      <td>Zip code</td>
+      <td colspan="3"></td>
+    </tr>
+    <% @bakers.each do |baker| %>
+      <tr>
+        <td><%= baker.name %></td>
+	<td><%= baker.cooking_school %></td>
+        <td><%= baker.zip_code %></td>
+        <td><%= link_to 'Show', baker %></td>
+        <td><%= link_to 'Edit', edit_baker_path(baker) %></td>
+        <td><%= link_to 'Destroy', baker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% current_user.email %>
+      </tr>
+    <% end %>
+
+</table>
+</div>
+<br>
+
+<%= link_to 'New Baker', new_baker_path %>

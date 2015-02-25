@@ -1,0 +1,29 @@
+<%= form_for(@baker) do |f| %>
+  <% if @baker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@baker.errors.count, "error") %> prohibited this baker from being saved:</h2>
+
+      <ul>
+      <% @baker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cooking_school %><br>
+    <%= f.check_box :cooking_school %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br>
+    <%= f.number_field :zip_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
