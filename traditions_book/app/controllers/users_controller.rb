@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
 	def create
 		# get data from the form
-		user_params = params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confimation)
+		user_params = params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confirmation)
 		#give the data to the model
 		@user = User.new(user_params)
 		#save the model
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
 	def update
 		#get data from form
-		user_params = params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confimation)
+		user_params = params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confirmation)
 		#find the existing user
 		@user = User.find(params[:id])
 		#update the user with new params
