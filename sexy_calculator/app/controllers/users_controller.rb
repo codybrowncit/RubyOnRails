@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
 	def create
 		# get data from the form
-		user_params = params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confimation)
+		user_params = params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
 		#give the data to the model
 		@user = User.new(user_params)
 		#save the model
