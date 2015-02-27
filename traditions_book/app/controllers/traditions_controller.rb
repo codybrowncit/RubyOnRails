@@ -1,18 +1,19 @@
 class TraditionsController < ApplicationController
 	before_action :authenticate_user!
+	load_and_authorize_resource
 	def index
-		@traditions = Tradition.all
+		#@traditions = Tradition.all
 	end
 
 	def new
-		@tradition = Tradition.new
+		#@tradition = Tradition.new
 	end
 
 	def create
 		# get data from the form
-		tradition_params = params.require(:tradition).permit(:rating, :name, :description, :approved)
+		
 		#give the data to the model
-		@tradition = Tradition.new(tradition_params)
+		#@tradition = Tradition.new(tradition_params)
 		@tradition.user = current_user
 		#save the model
 		if @tradition.save
@@ -25,18 +26,18 @@ class TraditionsController < ApplicationController
 	end
 
 	def show
-		@tradition = Tradition.find(params[:id])
+		#@tradition = Tradition.find(params[:id])
 	end
 
 	def edit
-		@tradition = Tradition.find(params[:id])
+		#@tradition = Tradition.find(params[:id])
 	end
 
 	def update
 		#get data from form
-		tradition_params = params.require(:tradition).permit(:rating, :name, :description, :approved)
+		
 		#find the existing tradition
-		@tradition = Tradition.find(params[:id])
+		#@tradition = Tradition.find(params[:id])
 		#update the tradition with new params
 		@tradition.update(tradition_params)
 		#redirect to show
@@ -44,8 +45,12 @@ class TraditionsController < ApplicationController
 	end
 
 	def destroy
-		@tradition = Tradition.find(params[:id])
+		#@tradition = Tradition.find(params[:id])
 		@tradition.destroy
 		redirect_to traditions_path
 	end
+	def tradition_params
+		params.require(:tradition).permit(:rating, :name, :description, :approved)
+	end
+
 end

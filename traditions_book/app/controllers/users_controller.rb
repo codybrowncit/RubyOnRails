@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	
 	def index
 		@users = User.all
 	end
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
 
 	def create
 		# get data from the form
-		user_params = params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confirmation)
+		
 		#give the data to the model
 		@user = User.new(user_params)
 		#save the model
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
 
 	def update
 		#get data from form
-		user_params = params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confirmation)
+		
 		#find the existing user
 		@user = User.find(params[:id])
 		#update the user with new params
@@ -45,5 +46,9 @@ class UsersController < ApplicationController
 		@user.destroy
 		redirect_to users_path
 	end
+	def user_params
+		params.require(:user).permit(:first_name, :last_name, :graduation_year, :major, :email, :password, :password_confirmation)
+	end
+
 	
 end

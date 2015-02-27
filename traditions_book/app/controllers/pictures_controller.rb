@@ -1,18 +1,19 @@
 class PicturesController < ApplicationController
 before_action :authenticate_user!
+load_and_authorize_resource
 def index
-		@pictures = Picture.all
+		#@pictures = Picture.all
 	end
 
 	def new
-		@picture = Picture.new
+		#@picture = Picture.new
 	end
 
 	def create
 		# get data from the form
-		picture_params = params.require(:picture).permit(:url, :tradition_id, :approved)
+		
 		#give the data to the model
-		@picture = Picture.new(picture_params)
+		#@picture = Picture.new(picture_params)
 		@picture.user = current_user
 		#save the model
 		if @picture.save
@@ -25,18 +26,17 @@ def index
 	end
 
 	def show
-		@picture = Picture.find(params[:id])
+		#@picture = Picture.find(params[:id])
 	end
 
 	def edit
-		@picture = Picture.find(params[:id])
+		#@picture = Picture.find(params[:id])
 	end
 
 	def update
 		#get data from form
-		picture_params = params.require(:picture).permit(:url, :tradition_id, :approved)
 		#find the existing 
-		@picture = Picture.find(params[:id])
+		#@picture = Picture.find(params[:id])
 		#update the picture with new params
 		@picture.update(picture_params)
 		#redirect to show
@@ -44,9 +44,12 @@ def index
 	end
 
 	def destroy
-		@picture = Picture.find(params[:id])
+		#@picture = Picture.find(params[:id])
 		@picture.destroy
 		redirect_to pictures_path
+	end
+	def picture_params
+	 params.require(:picture).permit(:url, :tradition_id, :approved)
 	end
 end
 

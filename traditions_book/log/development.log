@@ -38905,3 +38905,708 @@ Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:06:45 -0700
 
 
 Started GET "/assets/0star.png" for 127.0.0.1 at 2015-02-27 16:06:45 -0700
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:48:30 -0700
+
+ActionController::RoutingError (undefined local variable or method `load_and_authorize_resource' for TraditionsController:Class):
+  app/controllers/traditions_controller.rb:3:in `<class:TraditionsController>'
+  app/controllers/traditions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.7ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:48:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TraditionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/Users/codybrown/Documents/school/RubyOnRails/traditions_book/app/models/ability.rb:7: syntax error, unexpected ':', expecting keyword_end
+        can: :manage, :all
+            ^
+/Users/codybrown/Documents/school/RubyOnRails/traditions_book/app/models/ability.rb:9: syntax error, unexpected ':', expecting keyword_end
+        can: [:read, :create], [Tradition, User, Picture, Rating]
+            ^
+/Users/codybrown/Documents/school/RubyOnRails/traditions_book/app/models/ability.rb:9: syntax error, unexpected ',', expecting keyword_end
+        can: [:read, :create], [Tradition, User, Picture, Rating]
+                              ^):
+  app/models/ability.rb:7: syntax error, unexpected ':', expecting keyword_end
+  app/models/ability.rb:9: syntax error, unexpected ':', expecting keyword_end
+  app/models/ability.rb:9: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:49:28 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  Rendered traditions/_tradition.html.erb (30.1ms)
+  Rendered traditions/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 189ms (Views: 174.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-02-27 16:49:29 -0700
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-27 16:49:36 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2015-02-27 16:49:37 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 16:49:37 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 80ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:49:38 -0700
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:49:42 -0700
+Processing by TraditionsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 16:49:42 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-27 16:49:44 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 72ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ratings" for 127.0.0.1 at 2015-02-27 16:49:45 -0700
+Processing by RatingsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 16:49:45 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 16:49:46 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 73ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "email"=>"codyliabrown@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'codyliabrown@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/traditions
+Completed 302 Found in 70ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  Rendered traditions/_tradition.html.erb (5.1ms)
+  Rendered traditions/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-02-27 16:49:57 -0700
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-27 16:50:05 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 9ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:50:11 -0700
+
+
+Started DELETE "/session" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:50:17 -0700
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-27 16:50:19 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (26.3ms)
+  Rendered users/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 89ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-27 16:50:43 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "user"=>{"first_name"=>"NOt", "last_name"=>"Admin", "graduation_year"=>"2015", "major"=>"not", "email"=>"not@not.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'not@not.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "graduation_year", "last_name", "major", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-27 23:50:43.871647"], ["email", "not@not.com"], ["first_name", "NOt"], ["graduation_year", 2015], ["last_name", "Admin"], ["major", "not"], ["password_digest", "$2a$10$L4sK83q6H98x.2fjkaZPH.ffZXJ.cvSmYqX7Y4trq6Hmx45lfRwma"], ["updated_at", "2015-02-27 23:50:43.871647"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 79ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-27 16:50:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.2ms)[0m  SELECT "traditions".* FROM "traditions"  WHERE "traditions"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPicture Load (0.5ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:50:44 -0700
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:50:47 -0700
+Processing by TraditionsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 16:50:47 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "email"=>"not@not.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'not@not.com' LIMIT 1
+Redirected to http://localhost:3000/traditions
+Completed 302 Found in 65ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  Rendered traditions/_tradition.html.erb (5.0ms)
+  Rendered traditions/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-02-27 16:50:56 -0700
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-02-27 16:50:58 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  Rendered traditions/_tradition.html.erb (6.6ms)
+  Rendered traditions/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 81ms (Views: 77.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/traditions/9" for 127.0.0.1 at 2015-02-27 16:51:07 -0700
+Processing by TraditionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT  "traditions".* FROM "traditions"  WHERE "traditions"."id" = ? LIMIT 1  [["id", 9]]
+Completed 500 Internal Server Error in 5ms
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  cancancan (1.10.1) lib/cancan/ability.rb:219:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_additions.rb:338:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:41:in `authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:26:in `load_and_authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:10:in `block in add_before_filter'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `instance_exec'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
