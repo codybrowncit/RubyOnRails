@@ -19,11 +19,14 @@
 	<div class="container">
 		<div class="row ">
 			<%= image_tag "DSU.png", class:"img-responsive"%>
+
 		</div>
 		<div class="row">
-			<h1 id="title" class="text-center"><%= link_to "Traditions", traditions_path %></h1>
+			<button type="button" class="btn btn-default" >
+  						<span class="glyphicon glyphicon-align-justify" aria-hidden="true" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"></span>
+					</button>
 		</div>
-		<div class="row ">
+		<div class="collapse" id="collapseMenu" >
 			<nav class=" navbar navbar-default">
 				<div class="container-fluid col-sm-offset-4" >
 					
@@ -31,25 +34,29 @@
 						<% if user_signed_in? %>
 						<li><%= link_to "Sign Out", session_path, method: 'delete', role:"presentation",class:"text-center" %></li>
 						<% else %>
-						<li><%= link_to "Sign In", root_path, role:"presentation", class:"text-center" %></li>
+						<li><%= link_to "Sign In", new_session_path, role:"presentation", class:"text-center" %></li>
 						<li><%= link_to "Sign Up", new_user_path, role:"presentation", class:"text-center" %></li>
 						<% end %>
 						<li><%= link_to "Users", users_path, class:"", role:"presentation", class:"text-center"%></li>
 						<li><%= link_to "Ratings", ratings_path, class:"", role:"presentation", class:"text-center"%></li>
+						<li><%= link_to "Edit/Approve Traditions", traditions_path, class:"", role:"presentation", class:"text-center"%></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 		<div class="row">
+			<h1 id="title" class=" text-center"><%= link_to "Traditions", root_path %></h1>
 			<div id="flash-notice">
 				<%= notice %>
+
 			</div>
 			<div id="flash-alert">
 				<%= alert %>
+
 			</div>
 		
 			<% if user_signed_in? %>
-			<p>Welcome <%= current_user.first_name %>!</p>
+			
 			<% end %>
 			<%= yield %>
 		</div>

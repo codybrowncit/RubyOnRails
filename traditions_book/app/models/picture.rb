@@ -4,5 +4,5 @@ class Picture < ActiveRecord::Base
 	has_many :ratings
 		
 	validates :url, presence: true
-	#mount_uploader :url, PictureUploader
+	mount_uploader :url, PictureUploader
 end

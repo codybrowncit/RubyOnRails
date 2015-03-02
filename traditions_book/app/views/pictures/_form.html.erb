@@ -11,8 +11,8 @@
 <%= form_for(@picture) do |form| %>
 
 <p>
-	<%= form.label :url %><br />
-	<%= form.text_field :url %>
+	<%= form.label :url %>
+	<%= form.file_field :url %>
 </p>
 <p>
 	<%= form.label :tradition %><br />
