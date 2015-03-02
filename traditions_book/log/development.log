@@ -46255,3 +46255,893 @@ Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:15:37 -0700
 
 
 Started GET "/assets/0star.png" for 127.0.0.1 at 2015-03-02 16:15:37 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-02 16:19:51 -0700
+Processing by StaticController#welcome as HTML
+  [1m[35mTradition Load (0.3ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 9]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 11]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/welcome.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 99ms (Views: 94.0ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+Processing by StaticController#welcome as HTML
+  [1m[36mTradition Load (0.2ms)[0m  [1mSELECT "traditions".* FROM "traditions"[0m
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 10]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 11]]
+  Rendered static/welcome.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:57 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-02 16:19:58 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:19:58 -0700
+
+
+Started GET "/session/new" for 127.0.0.1 at 2015-03-02 16:20:05 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "email"=>"not@not.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'not@not.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+Processing by StaticController#welcome as HTML
+  [1m[35mTradition Load (0.3ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 9]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 11]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered static/welcome.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:20:11 -0700
+
+
+Started GET "/traditions/new" for 127.0.0.1 at 2015-03-02 16:20:15 -0700
+Processing by TraditionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered traditions/_form.html.erb (2.3ms)
+  Rendered traditions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 69.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/traditions" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+Processing by TraditionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoUzHDiLiIAJIEADTiV1m6im61Wr2ZZ1IYsIdsIHn/M=", "tradition"=>{"name"=>"testing", "description"=>"test", "approved"=>"1"}, "commit"=>"Create Tradition"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTradition Exists (0.1ms)[0m  SELECT  1 AS one FROM "traditions"  WHERE "traditions"."name" = 'testing' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "traditions" ("approved", "created_at", "description", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["approved", "t"], ["created_at", "2015-03-02 23:20:25.434030"], ["description", "test"], ["name", "testing"], ["updated_at", "2015-03-02 23:20:25.434030"], ["user_id", 3]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/traditions/13
+Completed 302 Found in 17ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/traditions/13" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+Processing by TraditionsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.2ms)[0m  SELECT  "traditions".* FROM "traditions"  WHERE "traditions"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 13]]
+  Rendered traditions/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 88ms (Views: 80.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-03-02 16:20:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-02 16:20:28 -0700
+Processing by StaticController#welcome as HTML
+  [1m[36mTradition Load (0.2ms)[0m  [1mSELECT "traditions".* FROM "traditions"[0m
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 10]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 11]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered static/welcome.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-03-02 16:20:35 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.2ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 13]]
+  Rendered traditions/_tradition.html.erb (15.1ms)
+  Rendered traditions/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/traditions/13/edit" for 127.0.0.1 at 2015-03-02 16:20:40 -0700
+Processing by TraditionsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT  "traditions".* FROM "traditions"  WHERE "traditions"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered traditions/_form.html.erb (1.8ms)
+  Rendered traditions/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/traditions/12/edit" for 127.0.0.1 at 2015-03-02 16:20:43 -0700
+Processing by TraditionsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT  "traditions".* FROM "traditions"  WHERE "traditions"."id" = ? LIMIT 1  [["id", 12]]
+Completed 500 Internal Server Error in 5ms
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  cancancan (1.10.1) lib/cancan/ability.rb:219:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_additions.rb:338:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:41:in `authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:26:in `load_and_authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:10:in `block in add_before_filter'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `instance_exec'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+
+
+Started GET "/traditions/12/edit" for 127.0.0.1 at 2015-03-02 16:20:43 -0700
+Processing by TraditionsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.1ms)[0m  SELECT  "traditions".* FROM "traditions"  WHERE "traditions"."id" = ? LIMIT 1  [["id", 12]]
+Completed 500 Internal Server Error in 4ms
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  cancancan (1.10.1) lib/cancan/ability.rb:219:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_additions.rb:338:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:41:in `authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:26:in `load_and_authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:10:in `block in add_before_filter'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `instance_exec'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.2ms)[0m  SELECT "traditions".* FROM "traditions"  WHERE "traditions"."user_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 13]]
+  Rendered traditions/_tradition.html.erb (3.7ms)
+  Rendered traditions/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 90ms (Views: 71.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-03-02 16:21:16 -0700
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-03-02 16:21:28 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 500 Internal Server Error in 23ms
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  cancancan (1.10.1) lib/cancan/ability.rb:219:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_additions.rb:338:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:41:in `authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:26:in `load_and_authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:10:in `block in add_before_filter'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `instance_exec'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-03-02 16:21:31 -0700
+Processing by TraditionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 8ms
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  cancancan (1.10.1) lib/cancan/ability.rb:219:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_additions.rb:338:in `authorize!'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:41:in `authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:26:in `load_and_authorize_resource'
+  cancancan (1.10.1) lib/cancan/controller_resource.rb:10:in `block in add_before_filter'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `instance_exec'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:440:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/codybrown/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/codybrown/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-02 16:21:39 -0700
+Processing by StaticController#welcome as HTML
+  [1m[36mTradition Load (0.3ms)[0m  [1mSELECT "traditions".* FROM "traditions"[0m
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 10]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 11]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered static/welcome.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 99ms (Views: 93.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:21:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-02 16:21:42 -0700
+Processing by StaticController#welcome as HTML
+  [1m[36mTradition Load (0.2ms)[0m  [1mSELECT "traditions".* FROM "traditions"[0m
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 10]]
+  [1m[35mPicture Load (0.1ms)[0m  SELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?  [["tradition_id", 11]]
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"  WHERE "pictures"."tradition_id" = ?[0m  [["tradition_id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered static/welcome.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-03-02 16:21:46 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.2ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 13]]
+  Rendered traditions/_tradition.html.erb (9.7ms)
+  Rendered traditions/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 90ms (Views: 83.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-03-02 16:21:46 -0700
+
+
+Started GET "/traditions" for 127.0.0.1 at 2015-03-02 16:33:05 -0700
+Processing by TraditionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTradition Load (0.2ms)[0m  SELECT "traditions".* FROM "traditions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRating Load (0.1ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mRating Load (0.0ms)[0m  SELECT "ratings".* FROM "ratings"  WHERE "ratings"."tradition_id" = ?  [["tradition_id", 13]]
+  Rendered traditions/_tradition.html.erb (9.0ms)
+  Rendered traditions/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 104ms (Views: 83.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/ratings.css?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/traditions.css?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/traditions.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/DSU.png" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
+
+
+Started GET "/assets/0star.png" for 127.0.0.1 at 2015-03-02 16:33:06 -0700
