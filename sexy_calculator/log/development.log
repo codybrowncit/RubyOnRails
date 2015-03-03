@@ -232,3 +232,44 @@ Started GET "/session/new" for 127.0.0.1 at 2015-03-03 13:06:11 -0700
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (22.7ms)
+  Rendered orders/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 124ms (Views: 114.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-03 13:07:44 -0700
