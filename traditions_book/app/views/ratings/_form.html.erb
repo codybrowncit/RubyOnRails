@@ -9,14 +9,10 @@
 </p>  
 <% end %>
 
-<%= form_for(@rating) do |form| %>
+<%= form_for ([@tradition, @rating]) do |form| %>
 <p>
 	<%= form.label :rating_number %><br />
 	<%= form.text_field :rating_number %>
-</p>
-<p>
-	<%= form.label :tradition %><br />
-	<%= form.collection_select :tradition_id, Tradition.all, :id, :name %>
 </p>
 <p>
 	<%= form.submit class:"btn btn-default"%>

@@ -1,13 +1,15 @@
 	<tr>
-		
+		<% tradition.pictures.each do |picture| %>
+		<td><%=image_tag picture.url, width:100 %></td>
+		<%end%>
 		<td><%= link_to tradition.name, tradition_path(tradition) %></td>
 		<td><%= truncate(tradition.description) %></td>
 		<td><%= link_to tradition.user.name, user_path(tradition.user) %></td>
 		<td><%= image_tag tradition.avg_rating, width:80%></td>
 		<% if !tradition.approved %>
-		<td>Awaiting Approval</td>
+			<td>Awaiting Approval</td>
 		<% else%>
-		<td>Approved</td>
+			<td>Approved</td>
 		<% end %>
 		<td>
 			<% if can? :update, tradition %>

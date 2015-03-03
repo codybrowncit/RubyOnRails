@@ -1,4 +1,10 @@
 <p>
+<% @tradition.pictures.each do |picture| %>
+<%=image_tag picture.url, class:"img-responsive" %>
+<%end%>
+
+</p>
+<p>
 <strong>Name:</strong>
 <%= @tradition.name %>
 
@@ -23,3 +29,6 @@
 (Awaiting Aproval)
 </p>
 <% end %>
+
+
+<%= link_to "Rate This Tradition", new_tradition_rating_path(@tradition) %>

@@ -1,11 +1,12 @@
 	<tr>
-		<td><%= rating.rating_number %></td>
+		<td><%=image_tag rating.rating_number.to_s+"star.png", width:80 %></td>
 		<td><%= rating.tradition.name %></td>
 		<td><%= rating.user.name %></td>
 
 			
 		<td>
-			<%= link_to "Edit", edit_rating_path(rating), class:"btn btn-default" %>
+
+			<%= link_to "Delete", rating_path(rating), method: 'delete',data: { confirm: "Are you sure you want to Delete this user"}, class:"btn btn-default" %>
 		</td>
 
 	</tr>

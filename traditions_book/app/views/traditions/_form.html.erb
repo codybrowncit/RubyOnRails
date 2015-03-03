@@ -19,11 +19,12 @@
 	<%= form.label :description %>
 	<%= form.text_field :description,class:"form-control" %>
 </p>
+<% if user_signed_in? && current_user.admin? %>
 <p>
 	<%= form.label :approved %>
 	<%= form.check_box :approved %>
-
 </p>
+<%end%>
 <p>
 	<%= form.submit class:"btn btn-default" %>
 </p>

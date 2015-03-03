@@ -16,31 +16,37 @@
 <%= @user.major %>
 
 </p>
-
 <p>
 <strong>Email:</strong>
 <%= @user.email %>
 </p>
 <p>
-
-  <strong>Traditions Added:</strong>
-  <ul>
-  <% @user.traditions.each do |tradition| %>
-    <li>
+<%= link_to "Edit Account", edit_user_path(@user), class:"btn btn-default" %>
+</p>
+<table class="table table-striped">
+  <tr>
+    <th>Traditions Added:</th>
+    <th>Pictures Uploaded:</th>
+  </tr>
+  <tr>
+    <% @user.traditions.each do |tradition| %>
+      <td>
       <%= link_to tradition.name, tradition %>
       <% if !tradition.approved %>
-      (Awaiting Approval)
+        (Awaiting Approval)
       <% end %>
-    </li>
-  <% end %>
-  </ul>
-</p>
+      </td>
+      <% tradition.pictures.each do |picture| %>
+        <td>
+          <%= image_tag picture.url, width:300 %> 
+          <% if !picture.approved %>
+            (Awaiting Approval)
+          <% end %>
+        </td>
+      <%end%>
+  </tr>
+    <% end %>
+</tr>
+</table>
 
-<p>
-  <strong>Pictures Uploaded:</strong>
-  <ul>
-  <% @user.pictures.each do |picture| %>
-    <li></li>
-  <% end %>
-  </ul>
-</p>
+

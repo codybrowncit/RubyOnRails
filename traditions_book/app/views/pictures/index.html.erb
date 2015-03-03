@@ -1,24 +1,27 @@
 <h2>All Picture</h2>
-<table>
+<table class="table">
 	<tr>
 		<th>Picture</th>
 		<th>Posted By</th>
 		<th>Tradition</th>
-		<th>Approved</th>
+		<th></th>
 		<th></th>
 	</tr>
 	
 	<% @pictures.each do |picture| %>
 	
 	<tr>
-		<td><%= picture.url %></td>
-		<td><%= picture.user.name%></td>
-		<td><%#= picture.tradition.name %></td>
-		<td><%= picture.approved %></td>
+		<td><%= image_tag picture.url, width:300 %></td>
+		<td><%= link_to picture.user.name, picture.user%></td>
+		<td><%= link_to picture.tradition.name, picture.tradition %></td>
+		<% if !picture.approved %>
+			<td>Awaiting Approval</td>
+		<% else%>
+			<td>Approved</td>
+		<% end %>
 		<td>
-			<%= link_to "Show", picture_path(picture) %>
-			<%= link_to "Edit", edit_picture_path(picture) %>
-			<%= link_to "Destroy", picture_path(picture), method: 'delete'  %>
+			<%= link_to "Edit", edit_picture_path(picture), class:"btn btn-default" %>
+			<%= link_to "Delete", picture_path(picture), method: 'delete', data: { confirm: "Are you sure you want to Delete this picture"}, class:"btn btn-default"  %>
 		</td>
 
 	</tr>
@@ -26,5 +29,5 @@
 	<% end %>
 
 </table>
-<br />
-<%= link_to "New Picture", new_picture_path %>
+
+<%= link_to "New Picture", new_picture_path, class:"btn btn-default" %>
