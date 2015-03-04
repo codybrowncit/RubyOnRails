@@ -17,5 +17,9 @@
 
 </table>
 <% if user_signed_in? %>
+<% @traditions.each do |tradition| %>
+<% if can? :create, tradition %>
 	<%= link_to "New Tradition", new_tradition_path, class:"btn btn-default"%>
+<%end%>
+<%end%>
 <%end%>

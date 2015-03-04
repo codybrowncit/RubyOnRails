@@ -1,7 +1,7 @@
 	<tr>
-		<% tradition.pictures.each do |picture| %>
-		<td><%=image_tag picture.url, width:100 %></td>
-		<%end%>
+		<%# tradition.pictures.each do |picture| %>
+		<td><%#=image_tag picture.url, width:100 %></td>
+		<%#end%>
 		<td><%= link_to tradition.name, tradition_path(tradition) %></td>
 		<td><%= truncate(tradition.description) %></td>
 		<td><%= link_to tradition.user.name, user_path(tradition.user) %></td>

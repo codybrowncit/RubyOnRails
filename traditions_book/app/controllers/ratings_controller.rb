@@ -7,12 +7,12 @@ def index
 
 	def new
 		#@rating = Rating.new
-		@tradition = Tradition.find(params[:tradition_id])
+		#@tradition = Tradition.find(params[:tradition_id])
 	end
 
 	def create
 		# get data from the form
-		@rating.tradition = Tradition.find(params[:tradition_id])
+		#@rating.tradition = Tradition.find(params[:tradition_id])
 		#give the data to the model
 		#@rating = Rating.new(rating_params)
 		@rating.user = current_user

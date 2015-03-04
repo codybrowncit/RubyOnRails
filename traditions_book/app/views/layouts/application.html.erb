@@ -33,13 +33,13 @@
 					<ul class="nav navbar-nav">
 						<% if user_signed_in? %>
 							<li><%= link_to "Sign Out", session_path, method: 'delete', role:"presentation",class:"text-center" %></li>
-							<% if current_user.admin? %>
-								<li><%= link_to "Users", users_path, class:"", role:"presentation", class:"text-center"%></li>
+							<%# if current_user.admin? %>
+								<li><%#= link_to "Users", users_path, class:"", role:"presentation", class:"text-center"%></li>
 								<li><%= link_to "Ratings", ratings_path, class:"", role:"presentation", class:"text-center"%></li>
 								<li><%= link_to "Edit/Approve Traditions", traditions_path, class:"", role:"presentation", class:"text-center"%></li>
-							<% else %>
-								<li><%= link_to "User Account", user_path(current_user), class:"", role:"presentation", class:"text-center"%></li>
-							<% end %>
+							<% #else %>
+								<li><%#= link_to "User Account", user_path(current_user), class:"", role:"presentation", class:"text-center"%></li>
+							<%# end %>
 						<% else %>
 							<li><%= link_to "Sign In", new_session_path, role:"presentation", class:"text-center" %></li>
 							<li><%= link_to "Sign Up", new_user_path, role:"presentation", class:"text-center" %></li>

@@ -6,8 +6,9 @@ class Ability
     if user.admin?
         can :manage, :all
     else
-        can [:read, :create], [Tradition, User, Picture, Rating] 
-        can [:update], [User, Picture], :user_id => user.id
+        can [:read], [Tradition]
+        can [:read, :create], [ User, Picture, Rating] 
+        can [:update, :destroy], [Picture, Rating], :user_id => user.id
     end
     # Define abilities for the passed in user here. For example:
     #
