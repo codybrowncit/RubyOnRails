@@ -1633,3 +1633,67 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-05 09:43:54 -0700
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-05 09:43:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 09:03:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered orders/_form.html.erb (48.4ms)
+  Rendered orders/new.html.erb within layouts/application (53.4ms)
+Completed 200 OK in 213ms (Views: 192.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered orders/_form.html.erb (5.7ms)
+  Rendered orders/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 09:03:50 -0600
+
+
+Started DELETE "/session" for 127.0.0.1 at 2015-03-17 09:03:59 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mGG6jNgKRT7DpPwnUX7MGMmA68kwVBlG1KX0yiQ3wEE="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 09:03:59 -0600
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (3.8ms)
+  Rendered orders/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
